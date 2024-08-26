@@ -1,6 +1,6 @@
 <div align="center">
   <div>&nbsp;</div>
-  <img src="assets\DALL·E.webp" width="800"/> 
+  <img src="assets\DALL·E.jpg" width="600" /> 
 </div>
 
 
