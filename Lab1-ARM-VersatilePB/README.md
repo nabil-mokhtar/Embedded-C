@@ -5,15 +5,16 @@
 
 ## **Structure**:  
 ### **reset section** : 
-    ```assmebly
+    ```
     ldr sp,= stack_top                                  #initialize the stack pointer with stack top value
     bl main                                             #branch to main 
-    ``` 
-    - `stack_top` value initialized in [linker_script](linker_script.ld) file. 
-    - main is a symbol which linker will resolve later. 
+    ```
+
+- `stack_top` value initialized in [linker_script](linker_script.ld) file. 
+- main is a symbol which linker will resolve later. 
 
 ### **stop section** :
-    ```assembly     
+    ```    
     stop : b stop                                        #hold processor in infinite loop after return form main 
     ``` 
 # [linker script](linker_script.ld)
