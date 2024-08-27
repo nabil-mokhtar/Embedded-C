@@ -7,13 +7,13 @@
 
 # Embedded C : Build Process, Startup, Linker, and more..
 
- This is hands-on training repository that includes solutions to assignments from the `Learn in Depth` course by Eng. Keroles, a comprehensive program designed to deepen your understanding of embedded systems.
+ This is hands-on training repository that includes solutions to assignments from the [Learn in Depth](https://www.learn-in-depth-store.com/) course by Eng. Keroles, a comprehensive program designed to deepen your understanding of embedded systems.
 
 ## Repository Structure
 The repository is organized into a series of labs, each corresponding to different assignments from the "Learn in Depth" course. These labs build upon one another, introducing key concepts in embedded systems step-by-step.
 
 
-- ## Lab 1: ARM VersatilePB 
+- ## Lab 1: [ARM VersatilePB](Lab1-ARM-VersatilePB) 
     **Objectives** : 
     - Understand the build process, Develop bare-metal application that execute directly on hardware.
     - Create starup and linker script files. 

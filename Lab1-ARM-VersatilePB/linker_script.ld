@@ -1,4 +1,4 @@
-ENTRY(reset)
+ENTRY(reset) 
 
 MEMORY
 {
