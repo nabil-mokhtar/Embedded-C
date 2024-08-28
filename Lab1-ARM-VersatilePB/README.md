@@ -1,9 +1,21 @@
-# Introduction :
+## Introduction
 The `ARM926EJ-S` is a widely used processor core in embedded systems, known for its balance of performance, power efficiency, and versatility. It belongs to the ARM9 family and supports a variety of features that make it suitable for embedded applications, including support for the ARM and Thumb instruction sets, memory management, and DSP extensions.
-### **Send data via UART0** :
+
+**Send data via UART0** :
 To send data,write to the UART0 `UARTDR` address : `0x101f1000` offset : `0x0`.
 
-## [startup](startup.s)
+
+## nitty gritty details for each file
+
+- [startup](#ref1)
+- linker script
+- Uart
+- App
+- [makefile](#ref5)
+
+<a name="ref1"></a>
+## startup
+
 ## **Purpose**:  
 `startup.s`  Frist code to be executed by the processor where pc points to after power-on, It's job is to initialize the stack pointer then jump to main function.
 
@@ -160,8 +172,9 @@ Uart_Send_String(string_buffer);
 - define main fuction and pass `string_buffer` value to `Uart_Send_String` fuction.
 
 
-
+<a name="ref1"></a>
 ## [Makefile](Makefile)
+
 ## Purpose
 - Automate build process and make it more generic.
 - specify the dependencies between source code files, object files, and executable files, as 
