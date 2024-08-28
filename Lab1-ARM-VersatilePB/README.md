@@ -5,13 +5,13 @@ The `ARM926EJ-S` is a widely used processor core in embedded systems, known for 
 To send data,write to the UART0 `UARTDR` address : `0x101f1000` offset : `0x0`.
 
 
-## nitty gritty details for each file
+## Nitty gritty details for each file
 
 - [startup](#ref1)
-- linker script
-- Uart
-- App
-- [makefile](#ref5)
+- [linker script](#ref2)
+- [Uart](#ref3)
+- [App](#ref4)
+- [MakeFile](#ref5)
 
 <a name="ref1"></a>
 ## startup
@@ -33,7 +33,8 @@ To send data,write to the UART0 `UARTDR` address : `0x101f1000` offset : `0x0`.
     
     stop : b stop                                        #hold processor in infinite loop after return form main 
      
-## [linker script](linker_script.ld)
+<a name="ref2"></a>
+## Linker script
 
 ## Purpose
 `linker_script.ld` define memory regions and allocate diffrent sections to their locations.
@@ -57,7 +58,8 @@ ENTRY(reset)
  - `(rwx)` : define memory acess permissions as read/write/execute. 
  - `ORIGIN`: define the start address of the region in physical memory. 
 
- ### **Sections** :  Defines the sections in the program, such as code, data, and bss sections, and specifies how they should be mapped to memory regions.
+ ### **Sections** : 
+  Defines the sections in the program, such as code, data, and bss sections, and specifies how they should be mapped to memory regions.
  ```c
   . = 0x10000 ;
  ```
@@ -109,8 +111,8 @@ ENTRY(reset)
 - stack top symbol is used by startup.s to initialize the stack pointer.
 - stack region holds local initialized, local uninitialized and local const variables. 
 
-
-## [Uart](uart.c)
+<a name="ref3"></a>
+## Uart
 ## Purpose
 - `uart.c` code implementation that transmit string using uart.
 - `uart.h` header file to import uart functionality to our app.
@@ -155,8 +157,9 @@ while (*P_TX_String !='\0')
 - set the value of `UART0DR` data register of the char from our array.
 - then increment the pointer value ( array index ).
 
+<a name="ref4"></a>
+## App
 
-## [App](app.c)
 ## Purpose :
 simple app to demonstrate the build process.
 ```c
@@ -172,8 +175,8 @@ Uart_Send_String(string_buffer);
 - define main fuction and pass `string_buffer` value to `Uart_Send_String` fuction.
 
 
-<a name="ref1"></a>
-## [Makefile](Makefile)
+<a name="ref5"></a>
+## Makefile
 
 ## Purpose
 - Automate build process and make it more generic.
