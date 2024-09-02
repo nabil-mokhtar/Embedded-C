@@ -1,5 +1,5 @@
 .section .vectors 
-.word   0x20001000            /* stack top address */ 
+.word   0x20001000            /* stack top address */          
 .word   _reset                /* 1 Reset */ 
 .word   Vector_handler        /* 2 NMI */ 
 .word   Vector_handler        /* 3 Hard Fault */ 
