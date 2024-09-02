@@ -29,6 +29,7 @@ struct {
 } R_ODR_t;
 
 volatile R_ODR_t*  R_ODR =   (volatile R_ODR_t*)(GPIOA_BASE + 0x0C) ;
+unsigned char g_variable[3] = {1,2,3}; 
 
 
 
