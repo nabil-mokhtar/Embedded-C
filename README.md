@@ -17,10 +17,33 @@ The repository is organized into a series of labs, each corresponding to differe
     **Objectives** : 
     - Understand the build process, Develop bare-metal application that execute directly on hardware.
     - Create starup and linker script files. 
-    - Learn how to use arm cross-toolchain : 
-        - **compile**  : `arm-none-eabi-gcc` toolchain for compiling source code into object files.
-        - **assemble** : `arm-none-eabi-as` to assemble assembly language files into object code.
-        - **linking**  : `arm-none-eabi-ld` or `arm-none-eabi-gcc` for linking object files to produce executable binaries. 
-        - **analysis** : tools such as `arm-none-eabi-objdump` and `arm-none-eabi-gdb` for examining and debugging the binary output..
+    - Learn how to use arm cross-toolchain.
     - Automate the build using make. 
+    
+
+- ## Lab 2: [ARM Cortex M3 - STM32F103C8T6](Lab2-ARM-Cortex-M3) 
+    **Objectives** : 
+    - Define Interrupt vectors Section. 
+    - Copy Data from ROM to RAM.
+    - Initialize Data Area. 
+    - Initialize Stack. 
+    - Create a reset section and Call main.
+        
+
+- ## Lab 3: [ARM Cortex M4 - TM4C123](Lab3-ARM-Cortex-M4) 
+    **Objectives** : 
+    - write vectors section in professional way.
+    - initialize the stack using tricky way. 
+
+
+
+## Tools :
+  - **compile**  : `arm-none-eabi-gcc` toolchain for compiling source code into object files.
+  - **assemble** : `arm-none-eabi-as` to assemble assembly language files into object code.
+  - **linking**  : `arm-none-eabi-ld` or `arm-none-eabi-gcc` for linking object files to produce executable binaries. 
+  - **analysis** : `arm-none-eabi-objdump` for examining the binary output.
+  - **debugging** :
+    - server : [OpenOCD](https://openocd.org/) 
+    - client : `arm-none-eabi-gdb`
+  
     
